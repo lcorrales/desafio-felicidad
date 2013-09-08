@@ -1,0 +1,223 @@
+body {
+    background-image: url("<%= image_path('body/pattern_website.jpg') %>");
+    
+    overflow-x: hidden;
+    position: relative;
+
+    font-family: 'Lato', sans-serif;
+    
+    & > div.header {
+    
+        width: 100%;
+        height: 160px;
+        
+        background-image: url("<%= image_path('header/patronGear.jpg') %>");
+        position: relative;
+        
+        .logo-wrapper {
+            width: 100%;
+            height: 160px; 
+    
+            background-image: url("<%= image_path('header/brilloHeader.png') %>");
+            background-position: center;
+            background-repeat: no-repeat;
+    
+            text-align: center;
+    
+            a.home {
+                width: 220px;
+                height: 160px; 
+                display: block;
+                margin: 0 auto;
+        
+                img {
+                    width: 220px;
+                    height: 160px; 
+                }
+            }
+        }
+        
+    
+        ul.social {
+            position: absolute;
+            height: 100px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            right: 0;
+    
+            li a{
+                display: block;
+            }
+        }
+    
+        @media screen and (max-width: 600px){
+            
+            z-index:  0;
+
+            ul.social {
+                li {
+                    overflow: hidden;
+                    a{
+                        margin-right: -140px;
+                    }
+                }
+            }
+
+            
+        }
+    
+        
+        
+    }
+    
+    & > div.nav {
+        width: 100%;
+        height: 40px;
+        
+        background-image: url("<%= image_path('nav/barra_menu.png') %>");
+        background-repeat: repeat-x;
+    
+        text-align: center;
+
+        ul {
+            height: 40px;
+            
+            margin-right: 24px;        
+    
+            display: inline-block;
+    
+            li {
+                width: 100px;
+                height: 40px;
+                
+                margin-right: 20px;
+
+                float:  left;  
+        
+                text-align: center;
+
+                a {
+                    height: 40px;
+                    display: block;
+
+                    font: 14px/40px 'Lato', sans-serif;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: #7C4D15;
+                }
+
+                &:hover a {
+                    font-weight: 900;
+                    color: #00595A;
+                    text-decoration: none;
+                }                
+
+            }
+        }
+    }
+
+    
+    @media screen and (max-width: 800px){
+        & > div.nav {
+            text-align: center;
+        
+            ul {
+                display: inline-block;
+                margin-right: 0px;        
+                float: none;
+            }
+        }
+    }
+
+    @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px) {
+    
+        & > div.nav {
+            text-align: center;
+
+            ul {        
+                display: inline-block;
+                margin-right: 0px;        
+                float: none;
+
+                li {    
+                    width: 70px;
+                    margin-right: 10px; 
+                    a {
+                        font: 11px/40px 'Lato', sans-serif;
+                    }   
+                }
+            }
+        }
+    }
+    
+    
+    & > div.content {
+        width: <%= 940 / 1024.0 * 100 %>%;
+        max-width: 940px;
+
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    
+    & > div.footer {
+        
+        width: <%= 940/1024.0 * 100 %>%;
+        height: 70px;
+
+        padding-top: 10px;
+
+        margin-right: auto;
+        margin-left: auto;
+        
+        font-size:12px;
+        font-style:italic;
+    	text-align:center;
+    	color:#3CBA93;
+
+        border-top: 1px solid;
+    
+        a:link{
+        	text-decoration:none;
+        	font-weight:700;
+        	color:#3CBA93;
+        }
+        
+        a:hover{
+        	text-decoration:none;
+        	font-weight:900;
+        	color:#FFCB05;
+        }
+        
+        a:visited{
+        	text-decoration:none;
+        	font-weight:700;
+        	color:#FFCB05;
+        }
+    }
+
+}
+
+.clear {
+    clear: both;
+}
+
+* {
+font-family: 'Lato', sans-serif;
+}
+
+    @media screen and (max-width: 1024px){
+        .home .app {
+            margin: 0 auto;
+            width: 80%;
+            img {
+                max-width: 48%;
+                margin-top: 60px;
+            }
+            .recuadro{
+                margin-top: 0;
+            }
+        }
+    }

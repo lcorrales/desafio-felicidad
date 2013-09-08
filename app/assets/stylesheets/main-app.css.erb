@@ -1,0 +1,853 @@
+
+html {
+	width: 100%;			/*   768 /  768 */
+	height: 100%;			/*  1024 / 1024 */
+}
+
+body {
+	width: 100%;			/*   768 /  768 */
+	height: 100%;			/*  1024 / 1024 */
+	position: relative;
+
+    font-size: 16px;
+}
+
+.page-container {
+	width: 100%;			/*   768 /  768 */
+	height: 100%;			/*  1024 / 1024 */
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.page-container .page-content {
+	margin: 0 auto;
+	
+	width: 100%;			/*  768 /  768 */
+	height: 100%;			/* 1024 / 1024 */
+	
+	max-width: 768px;
+	max-height: 1024px;
+	
+	background-position: top center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.page-container *{
+    font-family: Helvetica;
+}
+
+.loading{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.loading .wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.loading .wrapper img{
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+
+
+/* ================================================
+   ================= GLOBAL =======================
+   ================================================ */
+
+.image-link{
+	text-align: center;
+}
+
+.image-link span {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.image-link img{
+	height: 100%;
+	max-width: 100%;
+}
+ 
+.inactive { 
+	position: absolute;
+    left: -99999px;
+}
+
+.active {
+    position: initial;
+}
+
+.resize-background{
+	background-size: auto 100%;
+	background-position: center center;
+}
+
+.block{
+	display: block;
+}
+   
+/* ================================================
+   ================= PORTADA ======================
+   ================================================ */
+
+#portada {
+	background: url("<%= image_path('app/global/patron_gear_light.png') %>") repeat;
+	background-size: 120px 120px;
+}
+
+#portada .page-content {
+	background-image: url("<%= image_path('app/global/brillo_fondo_light.png') %>"); 
+}
+
+#portada .page-content header{
+	width: 100%;			/* 768 /  768 */
+	height: 6%;				/*  65 / 1024*/
+	
+	min-height: 65px;
+}  
+   
+#portada .page-content header a.info{
+	height: 65px;			/* 65 / 65 */
+	max-height: 65px;
+	
+	float: right;
+    margin-top: 20px;
+}
+
+#portada .page-content h1.logo-portada {
+	width: 87%;				/* 670 /  768 */
+	height: 54%;			/* 552 / 1024 */
+	
+	display: block;
+	margin: 0 auto;
+	
+	background-image: url("<%= image_path('app/global/logo.png') %>");
+	background-repeat: no-repeat;
+
+    margin-top: 5%;
+}
+
+#portada .page-content nav {
+	width: 57%;	/* 440 / 691.2 */
+	height: 13%;  /* 135 / 921.6 */ 
+    max-height: 135px;
+
+	margin: 0 auto;
+}
+
+#portada .page-content nav a {
+	margin-top: 15%;
+	height: 100%;
+	max-height: 135px;
+	text-align: center;
+
+    background-image: url("<%= image_path('app/portada/boton_entrar.png') %>"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+@media (max-width: 720px){ /* Styles for phones*/
+	#portada .page-content header{
+		min-height: 44px;
+	}
+
+    #portada .page-content nav a {
+        margin-top: 5%;
+            
+    }
+	
+	#portada .page-content header a.info{
+		height: 44px;
+	}  
+	
+	#portada .page-content h1.logo-portada {
+		background-size: contain;
+	}
+}
+
+
+
+
+/* ================================================
+   =============== INFORMACION ====================
+   ================================================ */
+
+#info {
+	background: url("<%= image_path('app/global/patron_gear_light.png') %>") repeat;
+	background-size: 120px 120px;
+}
+
+#info .page-content {
+	background: url("<%= image_path('app/global/brillo_fondo_light.png') %>");
+    background-repeat: none;
+	
+	height: 95.55859%;
+	padding-top: 2.44141%;
+}
+
+#info .page-content header {
+	width: 44.27083%;		/* 340 /  768 */ 
+	height:	27.34375%; 		/* 280 / 1024 */
+	
+	margin: 2.44141% auto; 	/*  25 / 1024 */
+	
+	background-image: url("<%= image_path('app/global/logo.png') %>");
+	background-repeat: no-repeat;
+
+    margin-top: 10%;
+}
+
+#info .page-content .recuadro-info {
+	width: 65.10417%;		/* 500 /  768 */ 
+	height:	35.64453%; 		/* 365 / 1024 */
+	
+	margin: 0 auto;
+	margin-bottom: 1.46484%;/*  15 / 1024 */ 
+	
+	background-image: url("<%= image_path('app/info/recuadro_info.png') %>");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#info .page-content .recuadro-info p {
+    padding: 35px;
+    text-align: center;
+    line-height: <%= 24/16.0 %>em;
+    font-size: <%= 22/16.0 %>em;
+
+    color: #00595A;
+}
+
+#info .page-content .recuadro-info p a{
+    font-weight: bold;
+
+
+    color: #00595A;
+}
+
+#info .page-content footer {
+	width: 59.10417%;		/* 500 /  768 */ 
+	height:	7.32422%; 		/*  75 / 1024 */
+	
+	margin: 0 auto; 
+}
+
+#info .page-content footer .back-button{
+	width: 21%;				/* 105 / 500 */
+	height: 100%%;		/*  55 /  75 */
+	
+	float: left;
+}
+
+#info .page-content footer ul{
+	width: 36%;				/* 180 / 500 */
+	height: 100%;			/*  75 /  75 */
+	
+	float: right;
+	
+}
+
+#info .page-content footer ul li{
+	width: 41.66667%;		/*  75 / 180 */
+	height: 100%;			/*  75 /  75 */
+	
+	margin-left: 8.33333%;	/*  15 / 180 */
+	
+	float: left;
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+    line-height: <%= 16/16.0 %>em;
+    font-size: <%= 16/16.0 %>em;    
+}
+
+
+@media (max-width: 720px){ /* Styles for phones*/
+	#info .page-content header{
+		width: 21.87500%;
+		height: 13.58369%;
+
+	}
+
+	#info .page-content .recuadro-info {
+		width: 100%%;		/* 320 /  320 */ 
+		height:	47.21030%; 	/* 220 / 480 */
+	}
+	
+	#info .page-content footer {
+		width: 100%;			/* 320 / 320 */ 
+		height:	9%; 			/*  44 / 480 */
+		
+		margin: 0 auto; 
+	}
+	
+	#info .page-content footer .back-button{
+		
+		margin-left: 4.68750%;  /*  15 / 320 */
+		
+		float: left;
+		
+	}
+	
+	#info .page-content footer ul li{
+		margin-left: 0%;		
+		margin-right: 4.68750%; /*  15 / 320 */
+	}
+}
+
+
+/* ================================================
+   ============== INSTRUCCIONES ===================
+   ================================================ */
+
+#instrucciones {
+	background: url("<%= image_path('app/global/patron_gear_dark.png') %>") repeat;
+	background-size: 120px 120px;
+}
+
+#instrucciones .page-content {
+	height: 92.09375%;
+	padding-top: 4.06504%;
+	
+	background-image:  url("<%= image_path('app/global/brillo_fondo_dark.png') %>");
+}
+
+#instrucciones .page-content header{
+	width: 76.82292%;		/* 590 / 768 */	
+	height: 11.17886%;		/* 110 / 984 */
+	
+	margin: 0 auto;
+    margin-top: 10%;
+	
+	background-image: url("<%= image_path('app/instrucciones/instrucciones.png') %>");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#instrucciones .page-content .recuadro-instr{
+	width: 76.82292%;		/* 590 / 768 */	
+	height: 37.60163%;		/* 370 / 984 */
+	
+	margin: 0 auto;
+	margin-top: 5.58943%;	/* 55 / 984 */
+	margin-bottom: 6.09756%;/* 60 / 984 */ 
+	
+	background-image: url("<%= image_path('app/instrucciones/recuadro_instrucciones.png') %>");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+    text-align: center;
+}
+
+#instrucciones .page-content .recuadro-instr p {
+    width: 80%;
+
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 10%;
+
+    color: #FFCB05;
+    text-align: center;
+    font-size: <%=25/16.0%>em;
+    line-height: <%=21/16.0%>em;
+
+}
+
+#instrucciones .page-content .recuadro-instr p span {
+    font-weight: bold;
+    font-size: <%=32/25.0%>em;
+}
+
+#instrucciones .page-content .boton-comenzar {
+	width: 42.31771%;		/* 325 / 768 */	
+	height: 15.24390%;		/* 150 / 984 */
+	
+	margin: 0 auto;
+}
+
+
+@media (max-width: 720px){ /* Styles for phones*/
+
+	#instrucciones .page-content header{
+		width: 67.18750%;		/* 215 / 320 */	
+		height: 8.60215%%;		/*  40 / 480 */
+	}
+	
+	#instrucciones .page-content .recuadro-instr{
+		width: 100%;			/* 320 / 320 */	
+		height: 40.86022%;		/* 190 / 465 */
+		
+		margin: 3.22581% auto;	/* 15 / 465 */
+	}
+
+}
+
+
+/* ================================================
+   ================ PREGUNTAS =====================
+   ================================================ */
+
+div.preguntas {
+	background: url("<%= image_path('app/global/patron_gear_dark.png') %>") repeat;
+	background-size: 120px 120px;
+}
+
+div.preguntas .page-content {
+	height: 92.09375%;
+	padding-top: 4.06504%;
+	
+	background-image: url("<%= image_path('app/global/brillo_fondo_dark.png') %>");
+}
+
+div.preguntas .page-content header{
+	width: 80.72917%;	/* 620 /  768 */	
+	height: 20.67781%;  /* 195 /  943.04 */
+	
+	margin: 0 auto;
+	
+	background-image: url("<%= image_path('app/preguntas/recuadro_preguntas.png') %>");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+    margin-top: 10%;
+    
+    position: relative;
+}
+
+div.preguntas .page-content header span{
+    
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+
+
+    height: 50%;
+    width: 70%;
+    text-align: center;
+    color: #FFCB05;
+
+    white-space: pre-line;
+
+    font-weight: bold;
+    font-size: <%=34/16.0%>em;
+
+    
+}
+
+div.preguntas .page-content ul.preguntas{
+	width: 80.72917%;	/* 620 / 768 */	
+	height: 38.70461%;  /* 365 / 943.04 */
+	
+	margin: 0 auto;
+	margin-top: 6.89260%;
+	margin-bottom: 7.42280%;
+}
+
+div.preguntas .page-content ul.preguntas li{
+	width: 100%;			/* 620 / 620 */	
+	height: 28.76712%;  	/* 105 / 365 */	
+	
+	margin: 0 auto;
+	margin-top: 3.84932%; 	/* 25 / 365 */
+	
+	background-image: url("<%= image_path('app/preguntas/boton_preg.png') %>");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+    color: #051F27;
+    font-size: 1em;
+
+    position: relative;
+}
+
+div.preguntas .page-content ul.preguntas li label{
+    position: absolute;
+    margin: auto;
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    line-height: <%=65/16.0%>em;
+    text-indent: 50px;
+
+    font-size: <%=25/16.0%>em;
+}
+
+div.preguntas .page-content ul.preguntas li label input{
+    position: absolute;
+    left: -9999px;
+}
+
+div.preguntas .page-content ul.preguntas li:first-child{
+	margin-top: 0px;
+}
+
+div.preguntas .page-content footer {
+	width: 80.72917%;		/* 620 / 768 */ 
+	height:	8.48320%; 		/*  80 / 943.04 */
+	
+	margin: 0 auto; 
+	margin-top: 7.42280%	/*  70 / 943.04 */
+}
+
+div.preguntas .page-content footer .back-button{
+	width: 23.38710%;		/* 145 / 768 */
+	height: 100%;			/*  80 /  80 */
+	
+	float: left;
+}
+
+@media (max-width: 720px){ /* Styles for phones*/
+
+	div.preguntas .page-content header{
+		width: 100%;		/* 320 /  320 */	
+		height: 19.22859%;  /* 85 /  442.05 */
+	}
+	
+	div.preguntas .page-content ul.preguntas{
+		width: 100%;		/* 620 / 320 */	
+		height: 40.71938%;  /* 180 / 442.05 */
+		
+		margin-top: 3.39328%;
+		margin-bottom: 3.39328%;
+	}
+	
+	div.preguntas .page-content ul.preguntas li{
+		width: 100%;			/* 320 / 320 */	
+		height: 27.77778%;  	/*  50 / 180 */	
+		
+		margin-topa: 4.33333%; 	/*  15 / 180 */
+	}
+	
+	div.preguntas .page-content footer {
+		width: 100%;			/* 320 / 320 */ 
+		height:	9.04875%; 		/*  40 / 442.05 */
+	}
+	
+	div.preguntas .page-content footer .back-button{
+		width: 21.87500%;		/* 70 / 320 */
+		height: 100%;			/* 40 /  40 */
+		
+		margin-left: 4.68750%;	/* 15 / 320 */
+	}
+
+}
+
+
+
+
+/* ================================================
+   ================= RESULTS ======================
+   ================================================ */
+
+
+div#results {
+    background: url("<%= image_path('app/global/patron_gear_light.png') %>") repeat;
+	background-size: 120px 120px;
+}
+
+div#results .page-content {
+    height: 92.09375%;
+	padding-top: 4.06504%;
+	
+	background-image: url("<%= image_path('app/global/brillo_fondo_light.png') %>");
+}
+
+div#results .page-content header{
+	width: 80.72917%;	/* 620 /  768 */	
+	height: 20.67781%;  /* 195 /  943.04 */
+	
+	margin: 0 auto;
+	
+	background-image: url("<%= image_path('app/results/listo.png') %>");
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+    background-position: center;
+    
+    position: relative;
+    margin-top: 5%;
+}
+
+div#results .page-content .recuadro-instr{
+    width: 76.82292%;		/* 590 / 768 */	
+	height: 37.60163%;		/* 370 / 984 */
+	
+	margin: 0 auto;
+	
+	background-image: url("<%= image_path('app/results/recuadro_resp.png') %>");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+
+    
+    position: relative;
+}
+
+div#results .page-content .recuadro-instr p {
+    width: 80%;
+    height: 70%;
+
+    text-align: center;
+
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    font-size: <%=28/16.0%>em;
+    color: #00595A;
+    
+}
+
+div#results .page-content .recuadro-instr p span{
+    font-size: <%=45/28.0%>em;
+    font-weight: bold;
+    color: #00595A;
+}
+
+div#results .page-content .recuadro-instr p span span{
+    font-size: <%=40/45.0%>em;
+    font-style: italic;
+    font-weight: normal;
+    color: #00595A;
+}
+
+div#results .page-content .sonrisa{
+    width: 76.82292%;    	/* 590 / 768 */	
+	height: 16.96641%;		/* 75 / 984 */
+	
+	margin: 0 auto;
+	
+	background-image: url("<%= image_path('app/results/sonrisa.png') %>");
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+    background-position: center;
+}
+
+div#results .page-content .container {
+    width: 100%;
+    height: 15.24390%;    	/* 150 / 984 */
+    
+    margin-top: 10px;
+    position: relative;
+}
+
+div#results .page-content .boton-where {
+    width: 42.31771%;		/* 325 / 768 */	
+	height: 100%;		/* 150 / 984 */
+	
+	margin: 0 auto;
+    
+}
+
+div#results .page-content .boton-reload {
+    width: 17.18750%;    	/* 325 / 768 */	
+	height: 50%;		/* 150 / 984 */
+	
+	margin: auto;
+
+    position: absolute;
+    right: 60px;
+    top: 0;
+    bottom: 0;
+
+    padding-top: 2px;
+}
+
+div#results .page-content .boton-reload img {
+    height: 110px;
+}
+
+
+
+
+/* ================================================
+   ================= RESULTS ======================
+   ================================================ */
+
+
+div#where {
+    background: url("<%= image_path('app/global/patron_gear_light.png') %>") repeat;
+    background-size: 120px 120px;
+}
+
+div#where .page-content {
+    height: 92.09375%;
+	padding-top: 4.06504%;
+	
+	background-image: url("<%= image_path('app/global/brillo_fondo_light.png') %>");
+}
+
+div#where .page-content header{
+	width: <%= 320 / 768.0 * 100 %>%;  /* 320 /  768 */	
+	height: 10.772004%%;  /*  45 /  943 */
+	
+	margin: 0 auto;
+    margin-bottom: 15px;
+	
+	background-image: url("<%= image_path('app/where/donde.png') %>");
+	background-repeat: no-repeat;
+	background-size: contain;
+    background-position: center;
+    
+    position: relative;
+    margin-top: 10%;
+}
+
+div#where .page-content .recuadro-instr{
+    width: 76.82292%;		/* 590 / 768 */	
+	
+	margin: 0 auto;
+    
+}
+
+div#where .page-content .recuadro-instr p {
+    width: 80%;
+    
+    text-align: center;
+
+    margin: 0 auto;
+    margin-bottom: 15px;
+    
+    font-size: <%=20/16.0%>em;
+    font-weight: bold;
+    color: #00595A;
+    
+}
+
+div#where .page-content .institutionScroll{
+    width: 80%;
+    height: 65%;
+
+    margin: 0 auto;
+
+    overflow-y: auto; 
+
+    
+}
+
+.institutionScroll .institution {
+    width: 80%;
+    height: 95px;
+
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+    background-image: url("<%= image_path('app/where/recuadro_opcion.png') %>");
+    background-repeat: no-repeat;
+	background-size: 100%;
+    background-position: center;
+
+    padding: 15px;
+}
+
+.institutionScroll .institution .institutionInformation{
+
+    width: 60%;
+    height: 40px;
+    
+    margin-bottom: 10px;
+
+    float: left;
+        
+    color: #FFCB05;
+    font-size: <%=20/16.0%>em;
+    font-weight: bold; 
+
+}
+
+
+.institutionScroll .institution .socialLinks{
+    width: 120px;
+    height: 50px;
+    
+    float: right;
+}
+
+.institutionScroll .institution .socialLinks a {
+    width: 50px;
+    height: 50px;
+
+    display: inline-block;
+
+    float: left;
+
+    margin-left: 10px;  
+}
+
+a.facebook {
+    background-image: url("<%= image_path('app/where/facebook.png') %>");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+a.twitter {
+    background-image: url("<%= image_path('app/where/twitter.png') %>");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+a.no-twitter {
+    background-image: url("<%= image_path('app/where/no_twitter.png') %>");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+a.no-facebook {
+    background-image: url("<%= image_path('app/where/no_facebook.png') %>");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+.institutionScroll .institution .contactInfo{
+
+    width: 100%;
+    height: 30px;
+    
+    color: #051F27;
+    font-size: <%=18/16.0%>em;
+    margin-top: 15px; 
+}
+
+
+.institutionScroll .institution .contactInfo a{
+    color: #FFCB05;
+    text-decoration: none;
+}

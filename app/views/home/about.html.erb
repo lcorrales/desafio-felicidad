@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DesafioFelicidad</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:900,700italic,400,400italic,900italic,700' rel='stylesheet' type='text/css'>
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo-wrapper">
+        <a class="home" href="#" > <%= image_tag("header/logoDF.png") %> </a>
+    </div>
+    
+    <ul class="social">
+        <li><a href="http://www.facebook.com/pages/Desaf%C3%ADo-Felicidad/153586911445170"><%= image_tag("header/facebook.png") %></a> </li>
+        <li><a href="https://twitter.com/DFelicidad"><%= image_tag("header/twitter.png") %></a> </li>
+    </ul>
+</div>
+
+<div class="nav">
+    <ul>
+        <li><%= link_to t(:about), home_index_path  %></li>
+        <li><%= link_to t(:example), home_stories_path  %></li>
+        <li><%= link_to t(:top), home_top_path  %></li>
+        <li><%= link_to t(:contactUs), home_contact_path  %></li>
+        <li><%= link_to t(:app), home_app_path  %></li>
+    </ul>
+</div>
+
+<div class="content">
+    <h1>Home#index</h1>
+    <p>Find me in app/views/home/index.html.erb</p>
+
+</div>
+
+<%= render :partial => "partials/footer" %>
+
+</body>
+</html>
+
+

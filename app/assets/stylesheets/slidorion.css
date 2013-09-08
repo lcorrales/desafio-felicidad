@@ -1,0 +1,91 @@
+/* Slidorion Stylesheet */
+#slidorion {
+	width: 768px;			/* Set to slidorion width. Is equal to #slider + #accordion width */
+	height: 450px;			/* Set to slidorion height. Is equal to #slider and #accordion height */
+	position: relative;
+	left: 50%;
+	margin-left: -384px;
+	padding: 10px;
+	background: #004645;
+	border: 1px solid #333;
+	-webkit-box-shadow: 0 0 34px #000;
+	-moz-box-shadow: 0 0 34px #000;
+	box-shadow: 0 0 34px #000;
+}
+
+#slider {
+	width: 428px;			/* Set to slider width */
+	height: 450px;			/* Set to slider height */
+	position: relative;
+	float: left;
+	overflow: hidden;		/* Hides the animations */
+}
+
+#slider > div {
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+#accordion {
+	width: 340px;			/* Set to accordion width */
+	height: 450px;			/* Set to image height */
+	font-family: Lato;
+	background: #FFCB05;
+	-webkit-box-shadow: -3px 0px 3px -1px rgba(51,51,51,0.3);
+	-moz-box-shadow: -3px 0px 3px -1px rgba(51,51,51,0.3);
+	box-shadow: -3px 0px 3px -1px rgba(51,51,51,0.3);
+	position: relative;
+	z-index:999;
+	overflow: hidden;
+	float: left;
+}
+
+#accordion > .link-header {
+	padding: 8px 14px;
+	font-size: 14px;
+	font-weight: 900;
+	color: #00595A;
+	background: #FFCB05;
+	background: -moz-linear-gradient(top, #FFCB05 59%, #F4AA06 100%);
+	background: -webkit-linear-gradient(top, #FFCB05 59%,#F4AA06 100%);
+	background: -o-linear-gradient(top, #FFCB05 59%,#F4AA06 100%);
+	background: -ms-linear-gradient(top, #FFCB05 59%,#F4AA06 100%);
+	background: linear-gradient(top, #FFCB05 59%,#F4AA06 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dcdcdc',GradientType=0 );
+	border-top: 1px solid #ccc;
+}
+
+#accordion > .link-header:first-child {
+	border-top:none;
+}
+
+#accordion > .link-header:hover {
+	background: #F2A50A;
+	cursor: pointer;
+}
+
+#accordion > .link-header.active {
+	border-bottom: none;
+	background: #051F27 !important;
+	color: #FFCB05;
+}
+
+#accordion > .link-content {
+	height: 283px;			/* This height needs to be changed as it depends on the accordion height and number of tabs */
+	color:#FFCB05;
+	font-weight: 300;
+	font-size: 13px;
+	line-height:20px;
+	margin: 0;
+	padding: 16px;
+	border: none;
+	background: #FFEB78;
+	background: -moz-linear-gradient(top, #062A30 0%, #07333D 10%);
+	background: -webkit-linear-gradient(top, #062A30 0%, #07333D 10%);
+	background: -o-linear-gradient(top, #062A30 0%, #07333D 10%);
+	background: -ms-linear-gradient(top, #062A30 0%, #07333D 10%);
+	background: linear-gradient(top, #062A30 0%, #07333D 10%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#062A30', endColorstr='#07333D',GradientType=0 );
+	overflow:auto;
+}

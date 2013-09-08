@@ -1,0 +1,9 @@
+<div class="nav">
+    <ul>
+        <li><%= link_to t(:about), about_path  %></li>
+        <li><%= link_to t(:example), home_stories_path  %></li>
+        <li><%= link_to t(:top), home_top_path  %></li>
+        <li><%= link_to t(:contactUs), home_contact_path  %></li>
+        <li><%= link_to t(:app), home_app_path  %></li>
+    </ul>
+</div>

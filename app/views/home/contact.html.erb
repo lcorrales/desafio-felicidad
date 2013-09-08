@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<%= render :partial => "partials/head_tag" %>
+
+<body>
+
+<%= render :partial => "partials/header" %>
+<%= render :partial => "partials/nav" %>
+
+<div class="content">
+    <div id="contactUs">
+        <div class="column">
+            <div class="header">
+                <%= image_tag ("contact/titular_contacto.png") %>
+            </div>
+            <p class="info">
+                Si querés tener más información acerca de la campaña <strong>&quot;Desafí­o Felicidad&quot;</strong>, te invitamos a llenar este formulario junto con tus datos personales.
+                <br/><br/>
+                Además podés contactarnos através del correo electrónico <a href="mailto:info@desafiofelicidad.com">info@desafiofelicidad.com</a> y por medio de nuestro perfiles en <a href="http://www.facebook.com/pages/Desafí­o-Felicidad/153586911445170">Facebook</a> y <a href="https://twitter.com/DFelicidad">Twitter</a>.
+
+            </p>
+            <div class="smile">
+                <%= image_tag ("contact/sonrisa_contacto.png") %>
+            </div>
+        </div>
+        <div class="column">
+            
+            <div id="container_formulario">
+                  <form action="" name="formulacion" id="formulacion">
+                   
+                    <p>Nombre: 
+                      <label for="nombre_completo"></label>
+                    <input name="nombre_completo" type="text" class="espacio_form" id="nombre_completo" size="35">
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>Correo electrónico: 
+                      <label for="email"></label>
+                      <input name="email" type="text" class="espacio_form" id="email" size="30">
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>Provincia: 
+                      <label for="provincias"></label>
+                      <select name="provincias" class="espacio_form" id="provincias">
+                        <option value="SJ">San José</option>
+                        <option value="CAR">Cartago</option>
+                        <option value="ALA">Alajuela</option>
+                        <option value="HER">Heredia</option>
+                        <option value="PUN">Puntarenas</option>
+                        <option value="GUA">Guanacaste</option>
+                        <option value="LIM">LimÃ³n</option>
+                      </select>
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>Asunto: 
+                      <label for="asunto"></label>
+                      <input name="asunto" type="text" class="espacio_form" id="asunto" size="40">
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                      <textarea name="textfield" cols="50" rows="10" class="form_texto" id="textfield"></textarea>
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>  
+                        <input name="button2" type="reset" class="boton_form" id="button2" value="Borrar">
+                        <input name="Submit" type="button" class="boton_form" id="button"  value="Enviar">
+                    </p>
+                  </form>
+                </div>
+
+
+
+
+
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<%= render :partial => "partials/footer" %>
+
+</body>
+</html>
+
+

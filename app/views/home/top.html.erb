@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<%= render :partial => "partials/head_tag" %>
+
+<body>
+
+<%= render :partial => "partials/header" %>
+<%= render :partial => "partials/nav" %>
+
+<div class="content">
+
+    <div class="top">
+        <div class="header">
+            <h2><%= image_tag("top/titular_top.png") %></h2>
+            <p>Este es el &quot;Top de la Felicidad&quot;, si estás entre los primeros lugares: ¡Felicidades!. Eso quiere decir que muchas personas te han nominado por haberlas ayudado a ser más felices. <br><br>
+               Si no sabés cómo nominar a alguien en el Top de la Felicidad&quot; esta es la dinámica. Si hoy un familiar, un amigo(a) o un conocido te hizo sonreír, agradecéle twiteando su nombre de usuario seguido de #hoymehizofeliz y explicános porqué.<br><br>
+        </div>
+    
+        <div class="medals">
+            <div class="bar"></div>
+    
+            <div class="medal">
+                <%= image_tag ("top/m_plata.png") %>
+                <div><p id="second-place"></p></div>
+            </div>
+            <div class="medal">
+                <%= image_tag ("top/m_oro.png") %>
+                <div><p id="first-place"></p></div>
+            </div>
+            <div class="medal">
+                <%= image_tag ("top/m_bronce.png") %>
+                <div><p id="third-place"></p></div>
+            </div>
+        </div>
+    
+        <div class="ranking">
+            <div id="ranking-left" class="list">
+            </div>
+            <div class="feed">
+                <a class="twitter-timeline" href="https://twitter.com/search?q=%23hoymehizofeliz" data-widget-id="296133269383151616">Tweets sobre "#hoymehizofeliz"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+</div>
+
+<%= render :partial => "partials/footer" %>
+
+</body>
+</html>
+
+
+

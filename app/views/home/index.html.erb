@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<%= render :partial => "partials/head_tag" %>
+
+<body>
+
+<%= render :partial => "partials/header" %>
+<%= render :partial => "partials/nav" %>
+
+<div class="content">
+
+    <div class="home">
+        <div class="app">
+            <%= image_tag("home/bodegon.png") %> 
+            <div class="recuadro">
+                <h2>¿Querés hacer felices <br> a otras personas?</h2>
+                <p>Contestá las siguientes cuatro preguntas y nuestra aplicación se encargará de darte opciones para que colaborés en el desarrollo de una Costa Rica más feliz.</p>
+                <%= link_to t(:app), home_app_path  %>
+            
+            </div>
+
+            <div style="clear: both"></div>
+        </div>
+
+        <div id="acercaDe" class="video">
+            <h2> <%= image_tag('home/titular_desafio.png') %> <span>DESAFIO FELICIDAD</span></h2>
+            <div>
+
+                <iframe src="http://player.vimeo.com/video/55830273?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=00595a" width="620" height="413" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+                
+            </div>
+        </div>
+
+        <div class="explicacion">
+            <div class="background"></div>
+            <div class="columns">
+                <div class="column">
+    
+                    <p>En un intento por luchar contra el materialismo y el egoísmo imperante en la sociedad moderna, Desafío Felicidad es una campaña realizada con el único objetivo de promover un estilo de vida más altruista y desprendido para con las demás personas.</p>
+                    <br/>
+                    <p>Nosotros creemos que si nos preocuparamos más por la felicidad colectiva y no tanto en la individual, muchos de los problemas que hoy en día sufre nuestra sociedad desapacerían.<br></p>
+    
+                </div>
+                <div class="column"><%= image_tag('home/logo_index.png')%></div>
+                <div class="column">
+                    <p>Para colaborar en el alcance de esta meta, nuestro proyecto, por medio de una aplicación en línea, pretende recomendarle al usuario una manera en la que podría dar su aporte para la felicidad de Costa Rica. </p>
+                    <br/>
+                    <p>Esta recomendación estaría basada en su personalidad, su disposición, su estilo de vida y sus posibilidades económicas.</p>
+                    <br/>
+                    <p>De esta manera, todos los usuarios tendrían diferentes maneras de <strong>AYUDAR</strong>.</p>
+                </div>
+    
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="frase">
+            <%= image_tag('home/frase_index.png') %>
+        </div>
+
+    </div>
+
+</div>
+
+<%= render :partial => "partials/footer" %>
+
+</body>
+</html>

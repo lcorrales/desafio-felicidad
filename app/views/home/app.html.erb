@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Lato:900,700italic,400,400italic,900italic,700' rel='stylesheet' type='text/css'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="apple-touch-startup-image" href="<%= image_path('icons/icon64x64px.png') %>" />
+    <link rel="apple-touch-icon-precomposed" href="<%= image_path('icons/icon64x64px.png') %>"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Desafio Felicidad</title>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.1.15.min.js"></script>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+	
+    <script type="text/javascript" src=" <%= javascript_path("other/main")%>"></script>
+    <script type="text/javascript" src=" <%= javascript_path("other/addToHome")%>"></script>
+    
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-38015601-1']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="loading">   
+        <div class="wrapper">
+            <%= image_tag ('Loading.gif') %>
+        </div>
+    </div>
+
+  	<div id="portada" class="page-container">
+  		<div class="page-content">
+  			<header>
+  				<a class="info image-link block" href="#info">
+  					<span>Acerca de</span>
+  					<img src="<%= image_path('app/portada/boton_info.png') %>">
+  				</a>
+  			</header>
+  			
+  			<h1 class="logo-portada resize-background"></h1>
+			
+			<nav>
+				<a class="info image-link block" href="#instrucciones">
+  					<span>Entrar</span>
+  					
+  				</a>
+			</nav>  		
+  		</div>
+  	</div>
+  	
+  	<div id="info" class="page-container inactive">
+  		<div class="page-content">
+  			<header class="resize-background">
+  			</header>
+  			
+  			<div class="recuadro-info">
+                <p> <strong> Desafio Felicidad </strong> es una campaña que tiene como objetivo, comunicar y fomentar el sentimiento de felicidad, mediante el desarrollo de conductas empáticas con los demás y así contribuir en la lucha por una sociedad mejor y más humana. Si querés enterarte más sobre el proyecto, ingresa a: <a href="http://www.desafiofelicidad.com" >www.desafiofelicidad.com</a></p>
+            </div>
+  			
+  			<footer>
+  				<div class="back-button">
+	  				<a class="image-link block" href="#portada">
+	  					<span>Atras</span>
+	  					<img src="<%= image_path('app/info/atras_info.png') %>">
+	  				</a>
+  				</div>
+  				<ul>
+  					<li>
+  						<a class="image-link block" href="#">
+	  						<span>Facebook</span>
+	  						<img src="<%= image_path('app/info/facebook_info.png') %>">
+	  					</a>
+	  				</li>
+  					<li>
+  						<a class="image-link block" href="#">
+	  						<span>Twitter</span>
+	  						<img src="<%= image_path('app/info/twitter_info.png') %>">
+	  					</a>
+	  				</li>
+  				</ul>
+  			</footer>
+					
+  		</div>
+  	</div>
+  
+
+    <div id="instrucciones" class="page-container inactive">
+  		<div class="page-content">
+  			<header></header>
+  			<div class="recuadro-instr">
+                <p><span class="bold"> ¿Querés hacer felices a otras personas? </span> </br> </br> Contestá las siguientes cuatro preguntas y nosotros nos encargaremos de darte opciones para que colaborés en el desarrollo de una Costa Rica más feliz. </p>
+            </div>
+  			<a href="#preguntas-1" class="boton-comenzar image-link block">
+  				<span>Comenzar</span>
+	  			<img src="<%= image_path('app/instrucciones/boton_comenzar.png') %>" >
+  			</a> 
+  		</div>
+  	</div>
+  	
+
+  	<div id="preguntas-1" class="preguntas page-container inactive">
+    </div>
+
+    <div id="preguntas-2" class="preguntas page-container inactive">
+    </div>
+
+    <div id="preguntas-3" class="preguntas page-container inactive">
+    </div>
+
+    <div id="preguntas-4" class="preguntas page-container inactive">
+    </div>
+
+
+    <script id="question-template" type="text/x-handlebars-template">
+        
+            <div class="page-content">
+      		    <header><span>{{question}}</span></header> 
+      			<ul class="preguntas">
+      				<li><label onclick=""><input type="radio" name="pregunta{{id}}" data-next="{{next}}" value="{{value1}}">{{answer1}}</label></li>
+      				<li><label onclick=""><input type="radio" name="pregunta{{id}}" data-next="{{next}}" value="{{value2}}">{{answer2}}</label></li>
+      				<li><label onclick=""><input type="radio" name="pregunta{{id}}" data-next="{{next}}" value="{{value3}}">{{answer3}}</label></li>
+      			</ul>
+      			<footer>
+      				<div class="back-button">
+    	  				<a class="image-link block" href="{{previous}}"">
+    	  					<span>Atras</span>
+    	  					<img src="<%= image_path('app/info/atras_info.png') %>">
+    	  				</a>
+      				</div>
+      			</footer>
+      			
+      		</div>
+        
+    </script>
+
+
+    <div id="results" class="page-container inactive">
+        <div class="page-content">
+      		<header></header>
+  			<div class="recuadro-instr">
+                <p>
+                    Pódes hacer felices a:
+                    <br/><br/>
+                    <span id="help-result" class="display:none"></span>
+                </p>
+            </div>
+            <div class="sonrisa"></div> 
+            <div class="container"> 
+      			<a href="#where" class="boton-where image-link block">
+      				<span>Donde</span>
+    	  			<img src="<%= image_path('app/results/boton_donde.png') %>" >
+      			</a> 
+                
+                <a href="/home/app" class="boton-reload image-link block">
+          			<span>Denuevo</span>
+    	  			<img src="<%= image_path('app/results/rehacer.png') %>" >
+      			</a>
+
+            </div>
+  		</div>
+    </div>
+
+    <div id="where" class="page-container inactive">
+        <div class="page-content">
+          	<header></header>
+  			<div class="recuadro-instr">
+                <p>
+                    Te invitamos a ponerte en contacto con alguna de las siguientes instituciones: 
+                </p>
+            </div>
+            <div class="institutionScroll">
+    
+            
+
+
+                
+
+
+            </div>
+  		</div>
+    </div>
+
+    
+    <script id="institution-template" type="text/x-handlebars-template">
+        <div class="institution">
+            <div class="institutionInformation">
+                <p>{{name}}<p>
+            </div>
+            <div class="socialLinks"> 
+                {{#if facebook}}
+                    <a href="{{facebook}}" class="facebook"></a>
+                {{ else }}
+                    <a class="no-facebook"></a>
+                {{/if}}
+                {{#if twitter}}
+                    <a href="{{twitter}}" class="twitter"></a>
+                {{else}}
+                    <a class="no-twitter"></a>
+                {{/if}}
+            </div>
+            <div class="clear"></div>
+            <div class="contactInfo">
+                <p>
+                    <span class="address">{{address}}</span>
+                    <span class="phone">{{phone}}</span>
+                    <a class="website" href="{{website}}">Ir al sitio Web</a>
+                    <span class="email">{{email}}</span>
+                </p>
+            </div>
+        </div>
+    </script>
+
+
+  </body>
+</html>

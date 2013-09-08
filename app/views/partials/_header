@@ -1,0 +1,12 @@
+<div class="header">
+
+    <ul class="social">
+        <li><a href="http://www.facebook.com/pages/Desaf%C3%ADo-Felicidad/153586911445170"><%= image_tag("header/facebook.png") %></a> </li>
+        <li><a href="https://twitter.com/DFelicidad"><%= image_tag("header/twitter.png") %></a> </li>
+    </ul>
+
+    <div class="logo-wrapper">
+        <a class="home" href="/" > <%= image_tag("header/logoDF.png") %> </a>
+    </div>
+    
+</div>

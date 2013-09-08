@@ -1,0 +1,8 @@
+<div class="image_preloader">
+    <img src="<%= image_path('app/info/atras_info.png') %>">
+    <img src="<%= image_path('app/info/facebook_info.png') %>">
+    <img src="<%= image_path('app/info/twitter_info.png') %>">
+    <img src="<%= image_path('app/instrucciones/boton_comenzar.png') %>" >
+    <img src="<%= image_path('app/results/boton_donde.png') %>" >
+    <img src="<%= image_path('app/results/rehacer.png') %>" >
+</div>

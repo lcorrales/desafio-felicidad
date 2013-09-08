@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<%= render :partial => "partials/head_tag" %>
+
+<body>
+
+<%= render :partial => "partials/header" %>
+<%= render :partial => "partials/nav" %>
+
+<div class="content">
+    
+    <div id="stories">
+        <div class="header"></div>
+    
+        <div id="slidorion">
+            <div id="slider">
+                <div class="slide"><img src="<%= image_path('stories/madre_teresa.jpg') %>" width="428" height="450"></div>
+                <div class="slide"><img src="<%= image_path('stories/jaume_sanllorente.jpg') %>" width="428" height="450"></div>
+                <div class="slide"><img src="<%= image_path('stories/isabel_johanning.jpg') %>" width="428" height="450"></div>
+                <div class="slide"><img src="<%= image_path('stories/patch_adams.jpg') %>" width="428" height="450"></div>
+            </div>
+            
+            <div id="accordion">
+                <div class="link-header">MADRE TERESA DE CALCUTA</div>
+                <div class="link-content">
+
+                    Fue una monja católica de la India que se hizo célebre en todo el mundo por su entrega y amor hacia los demás.
+
+                    Esta mujer mostraba un especial afecto por "los no deseados, los no amados, aquellos de los que nadie se ocupaba". Recorría las calles de Calcuta lavando las heridas de los enfermos, dándoles de comer a los más necesitados y cuidando de niños huérfanos.
+                    
+                    Gracias a su determinación y al deseo de la felicidad de los demás, Madre Teresa fundó la orden de Misioneras de la Caridad. Reclutó a sus amigas y alumnas. Muy pronto, esta congregación creció de gran manera , a tal punto de formar todo un ejército de personas en todo el mundo que querían luchar contra la desigualdad, la injusticia y la pobreza. 
+                    
+                    Además de su beatificación por parte de la Iglesia Católica, la Madre Teresa obtuvo el Premio Nobel de la Paz en 1979.
+                </div>
+                <div class="link-header">JAUME SANLLORENTE</div>
+                <div class="link-content">
+                    Este español, a los 27 años, llevaba una vida como cualquiera de nosotros. Era un periodista exitoso, tenía un buen apartamento y un buen salario. Un día decidió irse a vacacionar a la India. Lo que se encontró ahí, lo marcaría para toda la vida.
+
+En Bombay, Jaume sufrió al ver la pobreza y el maltrato hacia los niños. Víctimas de agresión, explotados sexualmente y esclavizados para realizar trabajos insalubres, la cara de tristeza en esos niños lo atormentó y decidió que él tenía que hacer algo.
+
+El joven dejó su vida y trabajo en España; y tomó las riendas de un hospicio de huérfanos a punto de cerrar sus puertas en Bombay. Además fundó una ONG llamada "Sonrisas de Bombay", la cual actualmente ha ayudado a más de 6000 personas.
+
+Jaume ha sido victima de numerosas amenazas por parte de la mafia india, esto debido a que se ha atrevido a denunciar prostíbulos que explotan a menores de edad.
+
+Como él lo dice, la gente "siempre espera, espera, espera, espera sin dar. Si solo dieran un cinco por ciento más, verían que reciben un sesenta por ciento más. Basta con sonreír, algo tan tonto como levantarse y sonreír. Y pasar la primera hora del día sonriendo y así cada día… el mundo cambiaría."
+                </div>
+                <div class="link-header">ISABEL JOHANNING</div>
+                <div class="link-content">
+                        Esta costarricense encontró su vocación de servir a los demás en la región de Guinea-
+                        Bissau, en donde decidió adoptar a una niña que sufría una grave desnutrición. Con el
+                        pasar del tiempo, se encargó de darle hogar y educación a más niños africanos víctimas
+                        de la guerra. De esta manera nació Casa Emmanuel, administrada por Isabel junto con
+                        un grupo de misioneras y voluntarios.
+                        <br/>
+                        Hoy en día, tienen bajo su tutela a 155 niños, 14 de ellos contagiados con el virus del
+                        VIH. Además, en su escuela estudian más de 400 alumnos. También fundaron un
+                        hospital para atender a todos los enfermos de la región. Todo esto le da trabajo a más
+                        de 100 personas que viven a los alrededores.
+                        <br/>
+                        La vida para Isabel y sus niños no ha sido nada fácil. En 1998, tuvieron que sufrir los
+                        estragos de los conflictos bélicos que se estaban desarrollando en el territorio en el que
+                        vivían. Ellos fueron refugiados por el gobierno de Portugal y pudieron sobrevivir a tan
+                        horrible experiencia.
+                        <br/>
+                        Actualmente, Isabel y su equipo están luchando para construir un hogar especial para
+                        los niños discapacitados; pues en ciertos sectores del continente, los pequeños con
+                        malformaciones son asesinados, introducidos en hormigueros gigantes o tirados al mar
+                        pues se creen que son una maldición.
+                </div>
+                <div class="link-header">PATCH ADAMS</div>
+                <div class="link-content">
+                        Mientras estudiaba medicina, Hunter “Patch” Adams era muy criticado por sus
+                        profesores debido a su exceso de alegría en las clases. Este estudiante creía que la
+                        mayoría de los doctores se preocupaban más por la enfermedad del paciente y no por
+                        el paciente en sí mismo.
+                        <br/>
+                        Patch Adams tiene una manera de pensar muy diferente al resto de los doctores:
+                        <br/>
+                        “Propongo definir la salud como una vida feliz... En esta definición una persona que está
+                        muriendo de cáncer puede ser una persona que goza de buena salud. Hay gente que
+                        está muy enferma y, sin embargo, podemos decir que dada su actitud de alegría, son
+                        seres saludables”
+                        <br/>
+                        Gracias a esta manera de pensar, Adams creó la risoterapia. Esta consiste en aliviar
+                        el dolor y aportarle beneficios mentales y emocionales a los pacientes por medio de la
+                        risa. Para poner esta forma de terapia en práctica, Patch Adams reunió a un grupo de
+                        voluntarios para visitar hospitales vestidos de payasos. Por medio de música, bailes,
+                        cantos y actuaciones, los voluntarios buscan hacer reír a los enfermos para hacerlos
+                        sentirse mejor. Este tratamiento se ha difundido por todo el mundo con resultados
+                        sorprendentes, y cada año el doctor Adams viaja a diferentes países para promoverla.
+                        <br/>
+                        Además, Patch Adams creó el Instituto Gesundheit, un hospital para tratar
+                        gratuitamente a personas marginadas por la sociedad y sin ningún tipo de recursos.
+                        El capital para crear este hospital se obtuvo por medio de donaciones, después de
+                        que millones de personas vieran la producción de Universal Studios, “Patch Adams: El
+                        doctor de la risa”, la cual está basada en su vida.
+    
+                </div>
+            </div>
+    	</div>
+    </div>
+</div>
+
+<%= render :partial => "partials/footer" %>
+
+</body>
+</html>
+
+
